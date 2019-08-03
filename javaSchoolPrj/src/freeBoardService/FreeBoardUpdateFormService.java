@@ -16,14 +16,11 @@ public class FreeBoardUpdateFormService implements FreeBoardService {
 		int page=Integer.parseInt(request.getParameter("page"));
 		int bno=Integer.parseInt(request.getParameter("bno"));
 		FreeBoardDAO bDao=FreeBoardDAO.getInstance();
-		FreeBoard board = bDao.getFreeBoard(bno);
+		FreeBoard freeboard = bDao.getFreeBoard(bno);
 		
-		System.out.println("BNO"+board);
-		
-		request.setAttribute("board", board);
+		request.setAttribute("freeboard", freeboard);
 		request.setAttribute("page", page);
-		//update와 view 폼이 다른 부분. 나머지는 같다. 비슷해서 같이쓰기도 한다.
-		request.getRequestDispatcher("/freeboard/freeboardUpdate.jsp").
+		request.getRequestDispatcher("/community/freeboard/freeboardUpdate.jsp").
 		forward(request, response);
 	}
 }

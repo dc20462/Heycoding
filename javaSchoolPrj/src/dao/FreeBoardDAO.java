@@ -33,20 +33,13 @@ public class FreeBoardDAO {
 				"    from (select * from tbl_freeboard order by bno desc) a" + 
 				"    where rownum<=?) b" + 
 				"    where b.rn>=? "; 
-//		String sql="select * from "
-//				+"(select /*+index_desc(BOARD_BNO_IDX)*/ rownum as rn, "
-//				+"a.bno, a.member_id, a.title, a.content, a.write_date, a.read_count,"
-//				+ "a.reply_count,a.filename "
-//				+"from (select * from board order by bno desc) a "
-//				+"where rownum<=?)b "
-//				+"where b.rn>=?";
 		try {
 			conn = DBConn.getConnect();
 			ps = conn.prepareStatement(sql);
 			ps.setInt(1, start+size);
 			ps.setInt(2, start+1);
 			rs = ps.executeQuery();
-			while (rs.next()) {
+			while (rs.next()) { 
 				FreeBoard freeboard = new FreeBoard();
 				freeboard.setBno(rs.getInt("bno"));
 				freeboard.setId(rs.getString("id"));
@@ -101,8 +94,8 @@ public class FreeBoardDAO {
 	public void freeboardWrite(FreeBoard freeboard) {
 		Connection conn = null;
 		PreparedStatement ps = null; 
-		String sql = "insert into tbl_freeboard(bno, id, title, content, filename) "
-				+ "values(freeboard_seq.nextval,?,?,?,? )";
+		String sql = "insert into tbl_freeboard(bno, id, title, content) "
+				+ "values(free_seq.nextval,?,?,?)";
 		try {
 			conn = DBConn.getConnect();
 			ps = conn.prepareStatement(sql);
@@ -144,6 +137,7 @@ public class FreeBoardDAO {
 				freeboard.setWrite_date(rs.getTimestamp("write_date"));
 				freeboard.setRead_count(rs.getInt("read_count"));
 				freeboard.setReply_count(rs.getInt("reply_count"));
+				//freeboard.setFilename(rs.getString("filename"));
 			}
 		} catch (Exception ex) {
 			ex.printStackTrace();
@@ -178,7 +172,7 @@ public class FreeBoardDAO {
 	public void freeboardUpdate(FreeBoard freeboard) { 
 		Connection conn = null;
 		PreparedStatement ps = null;
-		String sql = "update tbl_freeboard set title=?, content=?, filename=? where bno=?";
+		String sql = "update tbl_freeboard set title=?, content=? where bno=?";
 		try {
 			conn = DBConn.getConnect();
 			ps = conn.prepareStatement(sql);
@@ -245,11 +239,12 @@ public class FreeBoardDAO {
 		Connection conn = null;
 		PreparedStatement ps = null;
 		String sql1 = "update tbl_freeboard set reply_count=reply_count+1 where bno=?";
-		String sql2 = "insert into freereply(rno, bno, id, content) values(reply_seq.nextval, ?, ?, ?)";
+		String sql2 = "insert into tbl_freereply(rno, bno, id, content) values(freereply_seq.nextval, ?, ?, ?)";
 		try {
 			conn = DBConn.getConnect();
 			ps = conn.prepareStatement(sql1);
 			ps.setInt(1, freereply.getBno());
+			
 			int m = ps.executeUpdate();
 			ps.close();
 			
@@ -262,7 +257,7 @@ public class FreeBoardDAO {
 			if(m==1 && n==1) {
 				DBConn.commit(conn);
 			}else {
-				//DBConn.rollback(conn);
+				DBConn.rollback(conn); 
 			}
 		} catch (Exception ex) {
 			ex.printStackTrace();
@@ -277,7 +272,7 @@ public class FreeBoardDAO {
 		PreparedStatement ps = null;
 		ResultSet rs = null;
 		String sql = "select bno from tbl_freereply where rno=? ";
-		String sql1 = "update board set reply_count=reply_count-1 where bno=?";
+		String sql1 = "update tbl_freeboard set reply_count=reply_count-1 where bno=?";
 		String sql2 = "delete from tbl_freereply where rno=?";
 		try {
 			conn=DBConn.getConnect();
@@ -301,7 +296,7 @@ public class FreeBoardDAO {
 			if(m==1 && n==1) {
 				DBConn.commit(conn);
 			}else {
-				//DBConn.rollback(conn);
+				DBConn.rollback(conn);
 			}
 		} catch (Exception ex) {
 			ex.printStackTrace();

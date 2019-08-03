@@ -48,6 +48,5 @@ public class FreeBoardUpdateService implements FreeBoardService {
 		FreeBoardDAO bDao = FreeBoardDAO.getInstance();
 		bDao.freeboardUpdate(freeboard);
 		response.sendRedirect("freeboardList.do?page="+page);
-		/* /를 붙이면 localhost의 루트 */
 	}
 }

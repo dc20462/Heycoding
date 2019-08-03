@@ -14,7 +14,7 @@ public class DBConn {
 		try {
 			Context initContext = new InitialContext();
 			Context envContext  = (Context)initContext.lookup("java:/comp/env");
-			DataSource ds = (DataSource)envContext.lookup("jdbc/kth_oracle");
+			DataSource ds = (DataSource)envContext.lookup("jdbc/mvc_oracle");
 			conn = ds.getConnection();
 			conn.setAutoCommit(false);
 		}catch(Exception ex) {
@@ -53,7 +53,7 @@ public class DBConn {
 			e.printStackTrace();
 		}
 	}
-	public static void rollbck(Connection con) {
+	public static void rollback(Connection con) {
 		try {
 			con.rollback();
 			System.out.println("rollback success");

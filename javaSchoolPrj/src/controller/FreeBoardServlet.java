@@ -64,6 +64,7 @@ public class FreeBoardServlet extends HttpServlet {
 			service=new FreeBoardListPageService();
 			
 		}else if(command.equals("/freeboardWriteForm.do")) {
+			//System.out.println("form00");
 			service=new FreeBoardWriteFormService();
 			
 		}else if(command.equals("/freeboardWrite.do")) {

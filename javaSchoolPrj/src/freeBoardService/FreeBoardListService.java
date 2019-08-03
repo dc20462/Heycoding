@@ -16,9 +16,12 @@ public class FreeBoardListService implements FreeBoardService{
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
 		FreeBoardDAO bDao=FreeBoardDAO.getInstance();
 		List<FreeBoard> freeboardList=bDao.getFreeBoardAll();
+		
 		request.setAttribute("freeboardList", freeboardList);
+		
 		request.getRequestDispatcher("/freeboard/freeboardList.jsp").forward(request, response);
 	}
 

@@ -24,9 +24,6 @@
 
 <body>
     <!-- 헤더 시작 -->
-    <div class="container p-4">
-        <a class="navbar-brand" href="#"><img class="logo" src="img/hogwarts-7936.png" alt="자바중학교"></a>
-    </div>
     <div class="header">
         <nav class="navbar navbar-expand-md bg-dark navbar-dark px-5">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -35,6 +32,7 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <!-- 리스트 -->
                 <ul class="navbar-nav">
+                	<li><a class="navbar-brand" href="#"><img class="logo" src="img/logo.png" alt="자바중학교"></a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">학교소개</a>
                         <div class="dropdown-menu">
@@ -63,13 +61,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">커뮤니티</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="">
-                            	자유게시판
-                            
-                          <%--   <%
-                           response.sendRedirect("freeboardList.jsp");
-                            %> --%>
-                           	</a>
+                            <a class="dropdown-item" href="freeboardList.main">자유게시판</a>
                             <a class="dropdown-item" href="#">익명게시판</a>
                         </div>
                     </li>

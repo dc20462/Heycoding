@@ -10,7 +10,6 @@ public class FreeBoardWriteFormService implements FreeBoardService {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
-		request.getRequestDispatcher("/freeBoard/freeboardWrite.jsp").forward(request, response);
-		
+		request.getRequestDispatcher("/community/freeboard/freeboardWrite.jsp").forward(request, response);
 	}
 }

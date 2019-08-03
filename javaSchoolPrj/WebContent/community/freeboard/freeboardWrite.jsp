@@ -26,7 +26,7 @@ enctype="multipart/form-data" name="freeboardform">
 		<input type="button" value="글목록보기" onclick="location.href='freeboardList.do'">
 	</td>
 	</tr>
-</table>
+</table> 
 </form>
 </body>
 </html>

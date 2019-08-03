@@ -10,6 +10,7 @@
 <%
 //response.sendRedirect("boardList.do");
 response.sendRedirect("mainView.main");
+
 %> 
 </body>
 </html>

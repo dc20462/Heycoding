@@ -8,7 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
+import freeBoardService.FreeBoardListPageService;
+import freeBoardService.FreeBoardViewService;
+import mainService.MainFreeBoardListService;
 import mainService.MainMemberJoinService;
 import mainService.MainService;
 import mainService.MainViewService;
@@ -26,14 +28,12 @@ public class MainServlet extends HttpServlet {
      */
     public MainServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
 	 * @see Servlet#init(ServletConfig)
 	 */
 	public void init(ServletConfig config) throws ServletException {
-		// TODO Auto-generated method stub
 	}
 
 	/**
@@ -49,7 +49,6 @@ public class MainServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		request.setCharacterEncoding("utf-8");
 		doProcess(request,response);
 	}
@@ -66,6 +65,11 @@ public class MainServlet extends HttpServlet {
 			//service=new MainViewService();
 		}else if(command.equals("/join.main")) {
 			service=new MainMemberJoinService();
+		}else if(command.equals("/freeboardList.main")) {
+			//System.out.println("aa0");
+			service=new MainFreeBoardListService();
+		}else if(command.equals("/secretboardList.main")) {
+//			service=new MainFreeBoardListService();
 		}
 		service.execute(request, response); 	
 	}

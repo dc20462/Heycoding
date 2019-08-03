@@ -11,10 +11,21 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 </head>
 
 <body>
-<div class="container p-5">
+<div class="container pb-5">
+	<img src="img/books.jpg">
 </div>
 <div class="container">
-	<h2>게시판</h2> 
+	<h2>자유게시판</h2>
+	<hr/>
+	<div class="container p-3">
+	<li>본 사이트는 대한민국 저작권법 및 개인정보보호법을 준수합니다.</li>
+	<li>회원은 공공질서나 미풍양속에 위배되는 내용과 타인의 저작권을 포함한 지적재산권 및 기타 권리를 침해하는
+	내용물은 등록할 수 없으며, 이러한 게시물로 인해 발생하는 결과의 모든 책임은 회원 본인에게 있습니다.
+	게시된 사진이나 동영상은 요청 시에 삭제가능합니다. 관리자에게 문의바랍니다.</li>
+	<li>개인정보보호법 제 59조, 3호에 따라 타인의 개인정보
+	(주민번호, 폰번호, 학년, 반, 번호, 학번,주소, 혈액형 등)를
+	 유출한 자는 처벌될 수 있으며, 등록된 글(텍스트, 이미지 등)에 대한 법적책임은 글쓴이에게 있습니다.</li>
+	</div> 
 		<p align="right"><a href="freeboardWriteForm.do">글쓰기</a>
 	<table class="table table-info table-hover">
 		<thead>

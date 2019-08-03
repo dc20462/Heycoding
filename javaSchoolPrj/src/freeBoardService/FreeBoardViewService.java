@@ -22,13 +22,15 @@ public class FreeBoardViewService implements FreeBoardService {
 		List<FreeReply> freereplyList = bDao.getReplyList(bno);
 		
 		FreeBoard freeboard=bDao.getFreeBoard(bno);
+		System.out.println(freeboard.getTitle());
 		if(freeboard!=null) {
 			bDao.read_count_update(bno); 
 		}
 		//페이지 그려주기
-		request.setAttribute("Freeboard", freeboard);
+		request.setAttribute("freeboard", freeboard);
 		request.setAttribute("page", page);
-		request.setAttribute("FreereplyList", freereplyList);		
-		request.getRequestDispatcher("/freeboard/freeboardView.jsp").forward(request, response);
+		request.setAttribute("freereplyList", freereplyList);		
+		
+		request.getRequestDispatcher("/community/freeboard/freeboardView.jsp").forward(request, response);
 	}
 }
