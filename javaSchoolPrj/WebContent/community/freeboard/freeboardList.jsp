@@ -12,7 +12,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 
 <body>
 <div class="container pb-5">
-	<img src="img/books.jpg">
+	<img src="img/top.jpg">
 </div>
 <div class="container">
 	<h2>자유게시판</h2>

@@ -18,7 +18,7 @@
 	<!-- <form action="freeboardWrite.do" method="post"
 	 enctype="multipart/form-data" name="freeboardform"> -->
 	<div class="container pb-5">
-		<img src="img/books.jpg">
+		<img src="img/top.jpg">
 	</div>
 	<div class="container">
 		<h2>자유게시판</h2>

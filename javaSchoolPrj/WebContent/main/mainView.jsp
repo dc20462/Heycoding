@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>자바중학교</title>
     <link rel="stylesheet" href="css/mainstyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
@@ -32,7 +33,7 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <!-- 리스트 -->
                 <ul class="navbar-nav">
-                	<li><a class="navbar-brand" href="#"><img class="logo" src="img/logo.png" alt="자바중학교"></a></li>
+                	<li><a class="navbar-brand" href="#"><img class="logo" src="img/mainlogo.png" alt="자바중학교"></a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">학교소개</a>
                         <div class="dropdown-menu">
@@ -76,13 +77,13 @@
         <div class="carousel-inner">
             <!-- 슬라이드쇼 -->
             <div class="carousel-item active">
-                <img class="d-block w-100" src="img/academy-celebrate-celebration.jpg" alt="First slide">
+                <img class="d-block w-100" src="img/mainslide1.jpg" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="img/student2.jpg" alt="Second slide">
+                <img class="d-block w-100" src="img/mainslide2.jpg" alt="Second slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="img/student-with-file.jpg" alt="Third slide">
+                <img class="d-block w-100" src="img/mainslide3.jpg" alt="Third slide">
             </div>
             <!-- 슬라이드 쇼 끝 -->
             <!-- 넘김 버튼 -->
@@ -108,7 +109,7 @@
         <div class="container p-4">
             <div class="row">
                 <div class="col-lg-5 col-md-10 p-3">
-                    <h1 class="display-4 mb-4">JAVA NOTICE</h1>
+                    <h1 class="display-4 mb-4">JAVA <b>NOTICE</b></h1>
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
                         <a class="nav-item nav-link active" id="nav-notice-tab" data-toggle="tab" href="#nav-home"
                             role="tab" aria-controls="nav-notice" aria-selected="true">공지사항</a>
@@ -208,7 +209,7 @@
 
                 <!-- 게시판 2 -->
                 <div class="col-lg-5 col-md-10 p-3">
-                    <h1 class="display-4 mb-4">JAVA DATA</h1>
+                    <h1 class="display-4 mb-4">JAVA <b>DATA</b></h1>
                     <div class="nav nav-tabs" id="nav-data-tab" role="tablist">
                         <a class="nav-item nav-link active" id="nav-gallery-tab" data-toggle="tab" href="#nav-gallery"
                             role="tab" aria-controls="nav-data" aria-selected="true">학교갤러리</a>
@@ -304,8 +305,9 @@
                         </div>
                     </div>
                 </div>
-                <!-- today, calender -->
+                <!-- today -->
                 <div class="col-lg-2 col-md-10 p-3">
+                <h1 class="display-4 mb-4">TODAY <b>VIEW</b></h1>
                     <table class="table">
                         <tr>
                             <td><h5>Today</h5></td>
@@ -317,28 +319,34 @@
                         </tr>
                     </table>
                 </div>
-
             </div>
         </div>
-
 
         <!-- ABOUT JAVA -->
         <section id="about" class="">
             <div class="container-fluid p-5">
                 <div class="row">
                     <div class="col text-center">
-                        <h1 class="display-4 text-uppercase text-dark mb-4">ABOUT DATA</h1>
+                        <h1 class="display-4 text-uppercase text-dark mb-4">ABOUT JAVA MIDDLE SCHOOL</h1>
                     </div>
                     <div class="row py-3 no-gutters">
-                        <div class="col-sm-6 col-md-4 my-12"> <img
-                                src="https://images.pexels.com/photos/1350197/pexels-photo-1350197.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                                alt="" class="img-fluid rounded-circle"> </div>
-                        <div class="col-sm-6 col-md-4 my-12"> <img
-                                src="https://images.pexels.com/photos/1350197/pexels-photo-1350197.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                                alt="" class="img-fluid rounded-circle"> </div>
-                        <div class="col-sm-6 col-md-4 my-12"> <img
-                                src="https://images.pexels.com/photos/1350197/pexels-photo-1350197.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                                alt="" class="img-fluid rounded-circle"> </div>
+                        <div class="col-sm-6 col-md-4 my-12"> 
+                        	<img src="img/circle3.png" alt="" class="img-fluid">
+                        	<div class="col text-center">
+                        		<h5 class="text-dark mb-4">학교상징</h1>
+               				</div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 my-12"> <img src="img/circle2.png" alt="" class="img-fluid">
+                        	<div class="col text-center">
+                        		<h5 class="text-dark mb-4">학교투어</h1>
+               				</div>
+               			</div>
+                        <div class="col-sm-6 col-md-4 my-12">
+                         	<img src="img/circle.png" alt="" class="img-fluid"> 
+                         	<div class="col text-center">
+                        		<h5 class="text-dark mb-4">학교행사</h1>
+               				</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -349,7 +357,9 @@
     <section id="movie" class="">
         <div class="container-fluid px-5 py-5 bg-light">
             <div class="row">
-                <div></div>
+                <div class="col text-center">
+                        <h1 class="display-4 text-uppercase text-dark mb-4">ABOUT JAVA MIDDLE SCHOOL</h1>
+                </div>
                 <div class="embed-responsive embed-responsive-16by9">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/L40f5mgQGfY" frameborder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -363,6 +373,7 @@
     <section id="footer" class="">
         <div class="container-fluid p-5 bg-secondary">
             <div class="row">
+           		<img src="img/footer_logo.png" alt="" class="img-fluid"> 
                 (우) 부산광역시 진구 전포동
                 교무실 : 051-000-0000
                 행정실 : 051-000-0000

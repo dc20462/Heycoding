@@ -1,30 +1,35 @@
-/* 1200*640 */
-body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ /* 잔류값 초기화 */
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
 }
 
+html, body {
+	height: 100%;
+	font-family: 'Noto Sans KR', sans-serif;
+	letter-spacing: -10% !important;
+}
+
+/* font */
+.display-4 {
+    font-size: 24px !important;
+}
+
+/* carousel */
 .carousel-inner > .item > img {
     min-height: 500px;
-  } 
-
-/* 폰트 */
-.display-4 {
-    font-size: 24px
-    !important;
-}
+} 
 
 /* main-menu */
 a.nav-link.dropdown-toggle::after {
-    display:none;
-    /* 화살표삭제 */
+    display:none; /* 화살표삭제 */
 }
 .dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0;
-    /* hover시 메뉴드롭 */
+    display: block; /* hover시 메뉴드롭 */
+    margin-top: 20px !important;
+   
 }
-.logo {
-    width: 100px;
-    color: white;
-   /* 220*50, 150*34 */
+.navbar .navbar-nav {
+	
 }
