@@ -6,13 +6,15 @@
 <head>
 <meta charset="UTF-8">
 <title>자유게시판</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="css/mainstyle.css">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
 <div class="container pb-5">
-	<img src="img/top.jpg">
+	<img class="top" src="img/top.jpg">
 </div>
 <div class="container">
 	<h2>자유게시판</h2>
@@ -54,22 +56,38 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 	</table>
 	<!-- 페이징 -->
 	<nav>
+		<ul class="pagination justify-content-center">
 		<c:if test="${pageMaker.prev }">
-			<a href="freeboardList.do?page=${pageMaker.startPage-pageMaker.pageSize}">[이전]</a>
+			<li class="page-item">
+				<a class="page-link" href="freeboardList.do?page=${pageMaker.startPage-pageMaker.pageSize}">이전</a>
+			</li>
 		</c:if> 
 		<c:forEach begin="${pageMaker.startPage }" end="${pageMaker.endPage }" var="page">
 			<c:choose>
-				<c:when test="${page==pageMaker.currPage }">${page}</c:when>
+				<c:when test="${page==pageMaker.currPage }">
+					<li class="page-item page-link">
+						${page}
+					</li>
+				</c:when>
 				<c:otherwise>
-					<a href="freeboardList.do?page=${page}">${page}</a>
+					<li class="page-item">
+						<a class="page-link" href="freeboardList.do?page=${page}">${page}</a>
+					</li>
 				</c:otherwise>
 			</c:choose>
 		</c:forEach> 
 		<c:if test="${pageMaker.next }">
-			<a href="freeboardList.do?page=${pageMaker.endPage+1}">[다음]</a>
+			<li class="page-item">
+				<a class="page-link" href="freeboardList.do?page=${pageMaker.endPage+1}">다음</a>
+			</li>
 		</c:if>
+		</ul>
 	</nav>	
+	
 </div>
+<section>
+	footer
+</section>
 	<!-- 부트스트랩 -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> 

@@ -26,14 +26,26 @@
 <body>
     <!-- 헤더 시작 -->
     <div class="header">
-        <nav class="navbar navbar-expand-md bg-dark navbar-dark px-5">
+    	<!-- 미니메뉴 -->
+    	<nav class="navbar navbar-default navbar-expand-md">
+    		<div class="container-fluid d-flex">
+    			<div class="logo" id="mainlogo">
+    				<img class="logo" src="img/mainlogo.png" alt="자바중학교">
+    			</div>
+    			<ul class="nav navbar-nav justify-content-end ml-auto" id="smallmenu">
+    				<li><a class="nav-link" href="#">HOME</a></li>
+    				<li class="nav-item"><a class="nav-link" href="#">LOGIN</a></li>
+    				<li class="nav-item"><a class="nav-link" href="#">JOIN</a></li>
+    			</ul>
+    		</div>
+    	</nav>
+    	<!-- 메인 메뉴 -->
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark px-5" id="mainmenu">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <!-- 리스트 -->
                 <ul class="navbar-nav">
-                	<li><a class="navbar-brand" href="#"><img class="logo" src="img/mainlogo.png" alt="자바중학교"></a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">학교소개</a>
                         <div class="dropdown-menu">
@@ -206,7 +218,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- 게시판 2 -->
                 <div class="col-lg-5 col-md-10 p-3">
                     <h1 class="display-4 mb-4">JAVA <b>DATA</b></h1>
@@ -327,7 +338,9 @@
             <div class="container-fluid p-5">
                 <div class="row">
                     <div class="col text-center">
-                        <h1 class="display-4 text-uppercase text-dark mb-4">ABOUT JAVA MIDDLE SCHOOL</h1>
+						<div class="hr-sect">
+                        	<h1 class="display-4 text-dark mb-4">ABOUT JAVA MIDDLE SCHOOL</h1>
+                       	</div>
                     </div>
                     <div class="row py-3 no-gutters">
                         <div class="col-sm-6 col-md-4 my-12"> 
@@ -357,9 +370,6 @@
     <section id="movie" class="">
         <div class="container-fluid px-5 py-5 bg-light">
             <div class="row">
-                <div class="col text-center">
-                        <h1 class="display-4 text-uppercase text-dark mb-4">ABOUT JAVA MIDDLE SCHOOL</h1>
-                </div>
                 <div class="embed-responsive embed-responsive-16by9">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/L40f5mgQGfY" frameborder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -370,17 +380,15 @@
     </section>
 
     <!-- 푸터 -->
-    <section id="footer" class="">
-        <div class="container-fluid p-5 bg-secondary">
-            <div class="row">
-           		<img src="img/footer_logo.png" alt="" class="img-fluid"> 
-                (우) 부산광역시 진구 전포동
-                교무실 : 051-000-0000
-                행정실 : 051-000-0000
-                ALL RIGHTS RESERVED.
-            </div>
-        </div>
-    </section>
+    <div class="footer">
+    	<div class="footerlogo col-sm-6 col-md-3">
+      		<img src="img/footer_logo.png" alt="footer" class="footerlogo"> 
+      	</div>
+      	<div class="col-sm-6 col-md-9">
+		   <p class="footertext">부산광역시 부산진구 중앙대로 708 / 교무실 : 051-631-1175 / 행정실 : 051-753-5600
+		      COPYRIGHT © java middle school. All rights reserved. </p>
+      	</div>
+    </div>
 
     <!-- 부트스트랩 -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
