@@ -380,14 +380,20 @@
     </section>
 
     <!-- 푸터 -->
-    <div class="footer">
-    	<div class="footerlogo col-sm-6 col-md-3">
-      		<img src="img/footer_logo.png" alt="footer" class="footerlogo"> 
-      	</div>
-      	<div class="col-sm-6 col-md-9">
-		   <p class="footertext">부산광역시 부산진구 중앙대로 708 / 교무실 : 051-631-1175 / 행정실 : 051-753-5600
-		      COPYRIGHT © java middle school. All rights reserved. </p>
-      	</div>
+    <div class="footer container-fluid">
+   	 <div class="row">
+   	 	<div class="col-md-2">
+ 		  <div class="footerlogo">
+      		<img src="img/footer_logo.png" alt="footer" class="footerlogoimg">
+      		 </div>
+      	</div> 
+      	<div class="col-md-10">
+      	<div class="footertext">
+		   부산광역시 부산진구 중앙대로 708 / 교무실 : 051-631-1175 / 행정실 : 051-753-5600
+		      COPYRIGHT © java middle school. All rights reserved.
+	    </div>
+	    </div>
+      </div>
     </div>
 
     <!-- 부트스트랩 -->
